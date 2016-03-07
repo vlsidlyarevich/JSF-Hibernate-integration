@@ -6,26 +6,25 @@ import org.hibernate.annotations.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table( name= "users")
+@Table(name = "users")
 public class UserEntity {
 
 
     @Id
     @Column(name = "id")
-    private Long id;
+    private int id;
 
-    @Column(name = "name",length = 45)
+    @Column(name = "name", length = 45)
     private String name;
 
-    @Column(name = "role",length = 45)
+    @Column(name = "role", length = 45)
     private String role;
 
-
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -43,5 +42,15 @@ public class UserEntity {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", role='" + role + '\'' +
+                '}';
     }
 }
