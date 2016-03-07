@@ -6,11 +6,13 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
-    <h:form>
-        <h1>JSF Hibernate integration</h1>
-
-
-
+    <h3>JSF Hibernate integration</h3>
+    <h:form id="userForm">
+        <h:outputLabel value="User Name:" />
+        <h:inputText value="#{userBean.name}" /> <br />
+        <h:outputLabel value="User Role:" />
+        <h:inputText value="#{userBean.role}"/><br/>
+        <h:commandButton value="Submit" action="#{userBean.saveUser}"/>
     </h:form>
 </h:body>
 </html>

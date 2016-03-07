@@ -1,9 +1,10 @@
 package com.github.vlsidlyarevich.JSFHibernate.entities;
 
 
-import org.hibernate.annotations.Entity;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
