@@ -20,6 +20,12 @@ public class UserEntity {
     @Column(name = "role", length = 45)
     private String role;
 
+    public UserEntity(int id, String name, String role) {
+        this.id = id;
+        this.name = name;
+        this.role = role;
+    }
+
     public int getId() {
         return id;
     }
